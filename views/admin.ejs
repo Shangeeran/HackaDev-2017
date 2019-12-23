@@ -1,0 +1,92 @@
+<!doctype html>
+<html>
+<head>
+    <title>Workpara</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+    <link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.0.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+    <style>
+        body         { padding-top:80px; word-wrap:break-word; }
+        div {
+            width: 500px;
+            padding: 10px;
+            border: 10px solid gray;
+            margin: 0;
+        }
+
+        .button {
+     width: 80%;
+     height: 80%;
+          }
+
+
+    </style>
+
+<!-- <script>
+$(document).ready(function(){
+    $("button").click(function(){
+        alert("Accepted Employee");
+    });
+});
+</script> -->
+<script type="text/javascript">
+
+
+function OpenAlert(){
+        alert("Accepted Employee");
+        document.getElementById("getMessage").style.visibility="hidden";
+
+    }
+
+</script>
+
+
+
+</head>
+<body>
+<!-- <div class="container">
+
+    <div class="page-header text-center"> -->
+      <center>  <h1><span class="fa fa-anchor"></span> Admin Dashboard</h1>
+        <a href="/logout" class="btn btn-default btn-sm">Logout</a></center>
+    <!-- </div> -->
+
+    <div
+
+      <% if (typeof worksArray !== 'undefined' && worksArray.length > 0) {%>
+
+        <%for (var i = 0; i < worksArray.length; i++) { %>
+
+          <div>
+            1.<b>User ID:</b> <%= worksArray[i]._id%><br>
+            2.<b>User Name:</b><%= worksArray[i].userid%><br>
+            3.<b>User NIC:</b><%= worksArray[i].username%><br>
+            4.<b>User Address:</b><%= worksArray[i].address%><br>
+            5.<b>User WorkExperience:</b><%= worksArray[i].number%><br>
+            6.<b>User Phone:</b><%= worksArray[i].work%><br>
+            7.<b>User Age:</b><%= worksArray[i].area%><br>
+            8.<b>User Bio:</b><%= worksArray[i].zip%><br>
+           9.<b>User Jop:</b><%= worksArray[i].email%><br>
+           10.<b>User Jop:</b><%= worksArray[i].msex%><br>
+           11.<b>User Jop:</b><%= worksArray[i].fsex%><br>
+
+
+
+
+           <input type="button" id="getMessage" name="GetMessage" value="Accept" class="button" onclick="OpenAlert()"/>
+     <!-- <button type="button" name="button"> Accept</button> -->
+
+        </div>
+
+        <%}%>
+      <% } %>
+
+  </div>
+
+
+
+</body>
+</html>
